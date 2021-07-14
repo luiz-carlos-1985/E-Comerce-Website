@@ -1,0 +1,318 @@
+#map{
+    margin-bottom: 8px;
+}
+
+#pac-input {
+    top: 8px !important;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #MESSAGE
+\*------------------------------------*/
+.message{
+    box-sizing: border-box;
+    text-align: left;
+    background: rgba(0,0,0,0.1);
+    padding: 1rem;
+    width: 80%;
+    word-break: break-all;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease-in;
+    border-radius: 3px;
+    position: relative;
+}
+
+a.message:hover{
+    box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    transition: box-shadow 0.2s ease-in;
+}
+
+.message--you {
+    margin-left: 20%;
+}
+
+.message--other {
+    margin-right: 20%;
+}
+
+.message--inbox {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.message__text{
+    color: #222;
+}
+
+span.arrow {
+    position: absolute;
+    left: -30px;
+    top: -26px;
+    font-size: 43px;
+    font-weight: bold;
+}
+
+.message__time {
+    float: right;
+    font-size: 11px;
+    opacity: 0.5;
+    margin-top: 5px;
+    color: #222;
+}
+
+.message__composer {
+    color: #0FA0CE;
+    font-size: 0.9em;
+}
+
+
+.message__delete{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 35%;
+}
+.c-delete__trigger:hover .message__delete{
+    background: #e6e6e6;
+}
+
+
+
+
+/*------------------------------------*\
+  #DELETE SOMETHING
+\*------------------------------------*/
+.c-delete__trigger:hover .c-delete__icon{
+    display: block;
+}
+.c-delete__icon{
+    cursor: pointer;
+    display: none;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    right: 10px;
+    -webkit-backface-visibility: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+.c-delete__icon:hover{
+    transform: translateY(-50%) scale(1.15);
+    transition: transform 0.2s ease-in-out;
+}
+.c-delete__icon:active{
+    transform: translateY(-50%) scale(1);
+}
+
+.c-delete__icon::before,
+.c-delete__icon::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #e40f39;
+}
+
+.c-delete__icon::before{
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+.c-delete__icon::after{
+    transform: rotate(-45deg);
+    transform-origin: top right;
+    left: -9px;
+}
+
+.c-delete__cancel{
+    display: none;
+    color: #7a7a7a;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0 10px 0 0;
+    right: 100%;
+    width: 50px;
+    cursor: pointer;
+}
+
+.c-delete__cancel:hover{
+    color: #333;
+}
+
+.c-delete__confirm{
+    display: none;
+    color: white;
+    background-color: #e40f39;
+    border: none;
+}
+
+.c-delete__confirm:hover{
+    color: white;
+}
+
+.c-delete__confirm:active{
+    color: white;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #NOTIFICATIONS
+\*------------------------------------*/
+.c-dropdown{
+    position: relative;
+    z-index: 15;
+}
+
+.c-dropdown__trigger{
+    border: 1px solid #0FA0CE;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 2px;
+}
+
+.c-dropdown__content{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.15);
+    border-radius: 4px;
+}
+
+p.c-dropdown__title {
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 1px solid lightgrey;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+  #NOTIFICATIONS
+\*------------------------------------*/
+.c-notification--seen{
+    opacity: 0.6;
+}
+
+.c-notification--seen:hover{
+    opacity: 1;
+}
+
+.c-notification--unseen{
+    font-weight: bold;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+  #STATUS
+\*------------------------------------*/
+.status--error,
+.status--success{
+    padding: 0.3em 0.6em;
+    border-radius: 3px;
+}
+
+.status--error {
+    color: #ab0022;
+    background: rgba(230, 42, 50, 0.21);
+}
+
+.status--success{
+    color: #00ab63;
+    background: rgba(42, 230, 64, 0.2);
+}
+
+.js-input-error {
+    margin-top: -13px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+
+.js-date{
+    display: none;
+}
+
+.u-unvailable{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.h-fillParent{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/*------------------------------------*\
+  #AUCTION
+\*------------------------------------*/
+.auction__img{
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+}
+
+
+
+
+.h-show{
+    display: block;
+}
+.h-forceShow{
+    display: block!important;
+}
+
+.h-showInline{
+    display: inline-block;
+}
+
+.h-forceHide{
+    display: none!important;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+  #LAYOUT RELATED
+\*------------------------------------*/
+.l-pad1{
+    padding: 15px;
+}
